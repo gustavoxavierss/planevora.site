@@ -30,16 +30,12 @@ body.lock{overflow:hidden}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(124,95,245,.3)}50%{box-shadow:0 0 40px rgba(124,95,245,.6)}}
 @keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
-@keyframes slideIn{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
 @keyframes popIn{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:scale(1)}}
 
 .au{opacity:0;animation:fadeUp .7s ease forwards}
-.af{animation:fadeIn .5s ease both}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .reveal.vis{opacity:1;transform:translateY(0)}
 
@@ -61,71 +57,33 @@ body.lock{overflow:hidden}
 .btn-lg{padding:16px 34px;font-size:16px}
 .btn-sm{padding:9px 18px;font-size:13px}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s,backdrop-filter .3s}
-nav.scrolled{background:rgba(13,10,30,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
-.nav-inner{max-width:1080px;margin:0 auto;padding:0 18px;height:64px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--p),var(--g));display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 16px rgba(124,95,245,.4)}
-.logo-txt{font-family:var(--head);font-weight:800;font-size:18px;background:linear-gradient(90deg,var(--p2),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-cta{display:none}
-@media(min-width:640px){.nav-cta{display:flex;gap:10px;align-items:center}}
-
 /* HERO */
-.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 18px 60px;position:relative;overflow:hidden}
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 18px;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;pointer-events:none}
 .hero-blob1{position:absolute;top:-10%;left:-15%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,95,245,.12) 0%,transparent 65%)}
 .hero-blob2{position:absolute;bottom:-15%;right:-10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,165,.08) 0%,transparent 65%)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:50px 50px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent)}
 .badge-top{display:inline-flex;align-items:center;gap:7px;padding:6px 15px;border-radius:50px;background:rgba(124,95,245,.12);border:1px solid rgba(124,95,245,.3);font-size:12px;font-weight:700;color:var(--p2);letter-spacing:.5px;margin-bottom:22px;animation:fadeUp .7s .2s ease both}
-.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--g);animation:blink 2s ease infinite}
-.hero-title{font-family:var(--head);font-size:clamp(36px,8vw,76px);font-weight:800;line-height:1.02;letter-spacing:-1.5px;margin-bottom:18px;animation:fadeUp .7s .35s ease both}
+.hero-title{font-family:var(--head);font-size:clamp(34px,8vw,76px);font-weight:800;line-height:1.02;letter-spacing:-1.5px;margin-bottom:18px;animation:fadeUp .7s .35s ease both}
 .hero-grad{background:linear-gradient(135deg,#fff 0%,var(--p2) 35%,var(--g2) 70%,#fff 100%);background-size:300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradShift 7s ease infinite}
-.hero-sub{font-size:clamp(15px,3vw,20px);color:var(--t2);max-width:540px;margin:0 auto 36px;line-height:1.7;animation:fadeUp .7s .5s ease both}
+.hero-sub{font-size:clamp(15px,3vw,19px);color:var(--t2);max-width:540px;margin:0 auto 36px;line-height:1.7;animation:fadeUp .7s .5s ease both}
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:44px;animation:fadeUp .7s .65s ease both}
 .hero-trust{display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeUp .7s .8s ease both}
 .trust-item{font-size:12px;color:var(--t3);display:flex;align-items:center;gap:5px}
 .trust-check{color:var(--g);font-size:13px}
 
-/* MOCKUP */
+/* MOCKUP VIDEO YOUTUBE */
 .mockup-section{padding:20px 18px 80px;overflow:hidden}
 .mockup-wrap{max-width:900px;margin:0 auto;position:relative}
 .mockup-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(124,95,245,.14) 0%,transparent 65%);pointer-events:none;z-index:0}
 .mockup-device{position:relative;z-index:1;border-radius:20px;border:1px solid rgba(255,255,255,.1);background:var(--bg2);overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06);animation:float 5s ease infinite}
-.mockup-bar{height:44px;background:var(--bg3);display:flex;align-items:center;gap:8px;padding:0 16px;border-bottom:1px solid var(--bd)}
-.mockup-dots span{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}
+.mockup-bar{height:40px;background:var(--bg3);display:flex;align-items:center;gap:8px;padding:0 16px;border-bottom:1px solid var(--bd)}
+.mockup-dots span{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:4px}
 .mockup-dots span:nth-child(1){background:#ff5f57}
 .mockup-dots span:nth-child(2){background:#ffbd2e}
 .mockup-dots span:nth-child(3){background:#28ca41}
-.mockup-url{flex:1;background:rgba(255,255,255,.05);border-radius:6px;height:24px;margin:0 12px;display:flex;align-items:center;padding:0 10px;font-size:11px;color:var(--t3)}
-.mockup-body{padding:18px;display:grid;grid-template-columns:220px 1fr;gap:14px;min-height:380px}
-.mockup-sidebar{display:flex;flex-direction:column;gap:10px}
-.m-nav-item{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:10px;font-size:13px;color:var(--t2);cursor:default}
-.m-nav-item.active{background:var(--p3);color:var(--p2);border:1px solid rgba(124,95,245,.25)}
-.m-nav-item .m-icon{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
-.m-nav-item.active .m-icon{background:var(--p3)}
-.mockup-main{display:flex;flex-direction:column;gap:12px}
-.m-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
-.m-title{font-family:var(--head);font-size:16px;font-weight:700}
-.m-badge{padding:4px 10px;border-radius:50px;font-size:11px;font-weight:700;background:var(--g3);color:var(--g2);border:1px solid rgba(34,211,165,.2)}
-.m-card{background:var(--card);border-radius:12px;padding:14px;border:1px solid var(--bd)}
-.m-card-title{font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:7px}
-.m-card-body{font-size:12px;color:var(--t2);line-height:1.65}
-.m-progress{height:4px;background:rgba(255,255,255,.06);border-radius:50px;overflow:hidden;margin-top:8px}
-.m-progress-fill{height:100%;border-radius:50px}
-.m-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
-.m-tag{padding:3px 9px;border-radius:50px;font-size:11px;font-weight:600}
-.m-tag-p{background:var(--p3);color:var(--p2);border:1px solid rgba(124,95,245,.2)}
-.m-tag-g{background:var(--g3);color:var(--g2);border:1px solid rgba(34,211,165,.2)}
-.m-tag-r{background:rgba(244,114,182,.1);color:#f9a8d4;border:1px solid rgba(244,114,182,.2)}
-.m-img-gen{background:var(--card);border-radius:12px;padding:14px;border:1px solid rgba(124,95,245,.2);position:relative;overflow:hidden}
-.m-img-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.m-img-item{border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:20px;background:var(--bg3)}
-.m-steps{display:flex;flex-direction:column;gap:7px}
-.m-step{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--t2)}
-.m-step-num{width:20px;height:20px;border-radius:50%;background:var(--p);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.m-step.done .m-step-num{background:var(--g)}
-@media(max-width:700px){.mockup-body{grid-template-columns:1fr}.mockup-sidebar{display:none}}
+.mockup-video-container{width:100%;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000}
+.mockup-video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 
 /* FEATURES */
 .feat-section{padding:70px 18px}
@@ -144,7 +102,7 @@ nav.scrolled{background:rgba(13,10,30,.88);backdrop-filter:blur(20px);border-bot
 /* STEPS */
 .steps-section{padding:70px 18px;background:var(--bg2)}
 .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;max-width:900px;margin:0 auto}
-.step-card{padding:28px 24px;border-radius:var(--r2);background:var(--card);border:1px solid var(--bd);text-align:center;position:relative}
+.step-card{padding:28px 24px;border-radius:var(--r2);background:var(--card);border:1px solid var(--bd);text-align:center}
 .step-num{width:46px;height:46px;border-radius:50%;font-family:var(--head);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;background:linear-gradient(135deg,var(--p),#a855f7);color:#fff;box-shadow:0 4px 16px rgba(124,95,245,.35)}
 .step-card h3{font-family:var(--head);font-size:16px;font-weight:700;margin-bottom:9px}
 .step-card p{color:var(--t2);font-size:13px;line-height:1.7}
@@ -159,50 +117,18 @@ nav.scrolled{background:rgba(13,10,30,.88);backdrop-filter:blur(20px);border-bot
 .p-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);padding:4px 16px;border-radius:50px;font-size:11px;font-weight:800;white-space:nowrap;letter-spacing:.5px}
 .p-badge-pop{background:linear-gradient(90deg,var(--p),#a855f7);color:#fff}
 .p-badge-life{background:linear-gradient(90deg,var(--g),#0ea5e9);color:#000}
-.p-plan{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--t3);margin-bottom:8px}
-.p-price{font-family:var(--head);font-size:46px;font-weight:800;line-height:1;margin-bottom:4px}
+.p-plan{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:var(--t3);margin-bottom:8px}
+.p-price{font-family:var(--head);font-size:42px;font-weight:800;line-height:1;margin-bottom:4px}
 .p-price span{font-size:18px;font-weight:600;color:var(--t2)}
 .p-price-note{font-size:12px;color:var(--t3);margin-bottom:22px}
 .p-divider{height:1px;background:var(--bd);margin:20px 0}
 .p-feat-list{display:flex;flex-direction:column;gap:11px;flex:1}
-.p-feat{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--t2)}
-.p-feat-check{color:var(--g);font-size:14px;flex-shrink:0;margin-top:1px}
-.p-feat-x{color:var(--t3);font-size:14px;flex-shrink:0;margin-top:1px}
+.p-feat{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--t2);line-height:1.4}
+.p-feat-check{color:var(--g);font-size:14px;flex-shrink:0}
+.p-feat-x{color:var(--t3);font-size:14px;flex-shrink:0}
 .p-feat.off{color:var(--t3)}
 .p-cta{width:100%;margin-top:24px;padding:14px}
 .p-saving{text-align:center;font-size:12px;color:var(--g2);font-weight:600;margin-top:10px}
-
-/* TESTIMONIALS */
-.review-section{padding:70px 18px;background:var(--bg2)}
-.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;max-width:1000px;margin:0 auto}
-.r-card{padding:24px;border-radius:var(--r2);background:var(--card);border:1px solid var(--bd)}
-.r-stars{color:var(--amber);font-size:14px;margin-bottom:12px;letter-spacing:2px}
-.r-text{font-size:14px;color:var(--t2);line-height:1.75;font-style:italic;margin-bottom:16px}
-.r-author{display:flex;align-items:center;gap:11px}
-.r-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0}
-.r-name{font-size:13px;font-weight:700}
-.r-role{font-size:11px;color:var(--t3)}
-
-/* SECTION HEADERS */
-.s-head{text-align:center;margin-bottom:48px}
-.s-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:50px;background:var(--p3);border:1px solid rgba(124,95,245,.25);font-size:11px;font-weight:700;color:var(--p2);letter-spacing:.8px;text-transform:uppercase;margin-bottom:14px}
-.s-title{font-family:var(--head);font-size:clamp(26px,5vw,46px);font-weight:800;line-height:1.1;margin-bottom:13px}
-.s-desc{color:var(--t2);font-size:15px;max-width:520px;margin:0 auto;line-height:1.75}
-
-/* CTA FINAL */
-.cta-section{padding:90px 18px;text-align:center;position:relative;overflow:hidden}
-.cta-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,95,245,.08),rgba(34,211,165,.06));pointer-events:none}
-.cta-title{font-family:var(--head);font-size:clamp(28px,5vw,50px);font-weight:800;line-height:1.1;margin-bottom:16px}
-
-/* FAQ */
-.faq-section{padding:70px 18px}
-.faq-list{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
-.faq-item{border-radius:var(--r);border:1px solid var(--bd);overflow:hidden;background:var(--card)}
-.faq-q{width:100%;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;color:var(--t1);font-size:15px;font-weight:600;font-family:var(--sans);text-align:left;gap:12px}
-.faq-a{padding:0 20px 16px;color:var(--t2);font-size:14px;line-height:1.75;display:none}
-.faq-item.open .faq-a{display:block}
-.faq-item.open .faq-chevron{transform:rotate(180deg)}
-.faq-chevron{transition:transform .25s;flex-shrink:0;color:var(--t3)}
 
 /* FOOTER */
 footer{padding:40px 18px 50px;border-top:1px solid var(--bd);text-align:center}
@@ -211,88 +137,33 @@ footer{padding:40px 18px 50px;border-top:1px solid var(--bd);text-align:center}
 
 /* WHATSAPP BTN */
 .wpp-btn{position:fixed;bottom:24px;right:20px;z-index:300;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c7e);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;transition:all .25s;text-decoration:none;animation:pulse 3s ease infinite}
-.wpp-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55)}
 .wpp-btn svg{width:26px;height:26px;fill:#fff}
-.wpp-tooltip{position:fixed;bottom:86px;right:20px;z-index:300;background:var(--card);border:1px solid var(--bd2);border-radius:var(--r);padding:10px 14px;font-size:12px;color:var(--t2);max-width:200px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.4);pointer-events:none;opacity:0;transform:translateY(6px);transition:all .25s}
-.wpp-btn:hover ~ .wpp-tooltip{opacity:1;transform:translateY(0)}
-
-/* ACCESS MODAL */
-.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.82);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;pointer-events:none;transition:opacity .3s}
-.modal-overlay.show{opacity:1;pointer-events:all}
-.modal-box{background:var(--bg2);border:1px solid var(--bd2);border-radius:var(--r3);padding:36px 28px;max-width:420px;width:100%;animation:popIn .35s ease both}
-.modal-icon{width:60px;height:60px;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:28px}
-.modal-icon-lock{background:var(--p3);border:1px solid rgba(124,95,245,.3)}
-.modal-icon-err{background:rgba(244,114,182,.1);border:1px solid rgba(244,114,182,.25)}
-.modal-icon-ok{background:var(--g3);border:1px solid rgba(34,211,165,.25)}
-.modal-title{font-family:var(--head);font-size:22px;font-weight:800;text-align:center;margin-bottom:8px}
-.modal-sub{color:var(--t2);font-size:14px;text-align:center;line-height:1.7;margin-bottom:24px}
-.modal-input{width:100%;padding:13px 16px;border-radius:var(--r);background:var(--card);border:1px solid var(--bd2);color:var(--t1);font-size:15px;font-family:var(--sans);outline:none;margin-bottom:12px;transition:border-color .2s}
-.modal-input:focus{border-color:var(--p)}
-.modal-input::placeholder{color:var(--t3)}
-.modal-btn{width:100%;padding:14px;font-size:15px}
-.modal-err{background:rgba(244,114,182,.1);border:1px solid rgba(244,114,182,.2);border-radius:var(--r);padding:10px 14px;font-size:13px;color:#f9a8d4;margin-bottom:12px;display:none}
-.modal-note{text-align:center;font-size:12px;color:var(--t3);margin-top:12px;line-height:1.6}
-
-/* APP WRAPPER */
-#app-section{display:none}
-.app-topbar{background:var(--bg2);border-bottom:1px solid var(--bd);padding:0 18px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.app-topbar-logo{display:flex;align-items:center;gap:9px}
-.app-plan-badge{padding:4px 12px;border-radius:50px;font-size:11px;font-weight:700}
-.app-plan-basic{background:var(--p3);color:var(--p2);border:1px solid rgba(124,95,245,.25)}
-.app-plan-premium{background:var(--g3);color:var(--g2);border:1px solid rgba(34,211,165,.25)}
-.app-plan-lifetime{background:linear-gradient(90deg,rgba(34,211,165,.15),rgba(14,165,233,.15));color:var(--g2);border:1px solid rgba(34,211,165,.3)}
-.app-user-info{font-size:12px;color:var(--t2);display:flex;align-items:center;gap:10px}
-.app-logout{background:none;border:1px solid var(--bd);border-radius:var(--r);padding:6px 12px;color:var(--t2);font-size:12px;cursor:pointer;font-family:var(--sans)}
-.app-logout:hover{background:rgba(255,255,255,.06)}
-.days-badge{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.25);color:var(--amber);padding:4px 11px;border-radius:50px;font-size:11px;font-weight:700}
-.days-badge.exp{background:rgba(244,114,182,.1);border-color:rgba(244,114,182,.25);color:#f9a8d4;animation:blink 2s ease infinite}
-
-/* EXPIRED SCREEN */
-.expired-screen{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 18px}
-.expired-screen h2{font-family:var(--head);font-size:26px;font-weight:800;margin-bottom:12px;margin-top:20px}
-.expired-screen p{color:var(--t2);font-size:15px;line-height:1.7;max-width:380px;margin-bottom:28px}
 
 @media(max-width:640px){
-  .mockup-device{font-size:12px}
-  .pricing-grid{grid-template-columns:1fr}
   .hero-btns .btn-lg{width:100%;justify-content:center}
+  .pricing-grid{grid-template-columns:1fr}
+  .p-card{padding:24px 20px}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="mainNav">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo" onclick="showSection('landing');return false">
-      <div class="logo-icon">✦</div>
-      <span class="logo-txt">PlanevoraAI</span>
-    </a>
-    <div class="nav-cta">
-      <button class="btn btn-outline btn-sm" onclick="openAccessModal()">Entrar</button>
-      <button class="btn btn-primary btn-sm" onclick="scrollTo({top:document.getElementById('pricing').offsetTop-70,behavior:'smooth'})">Ver planos</button>
-    </div>
-  </div>
-</nav>
-
-<!-- LANDING PAGE -->
 <div id="landing-section">
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
     <div class="hero-blob1"></div>
     <div class="hero-blob2"></div>
     <div class="hero-grid"></div>
   </div>
-  <div class="badge-top"><span class="badge-dot"></span> IA Exclusiva para Professores &bull; Novo</div>
+  <div class="badge-top">IA Exclusiva para Professores</div>
   <h1 class="hero-title">Crie planos de aula<br/><span class="hero-grad">completos em segundos</span></h1>
   <p class="hero-sub au" style="animation-delay:.5s">A PlanevoraAI entende a sua turma, gera atividades criativas alinhadas à BNCC, músicas, materiais e imagens — tudo pronto para usar amanhã.</p>
   <div class="hero-btns">
-    <button class="btn btn-primary btn-lg" onclick="scrollTo({top:document.getElementById('pricing').offsetTop-70,behavior:'smooth'})">
+    <button class="btn btn-primary btn-lg" onclick="scrollTo({top:document.getElementById('pricing').offsetTop-20,behavior:'smooth'})">
       🚀 Quero começar agora
     </button>
-    <button class="btn btn-outline btn-lg" onclick="scrollTo({top:document.getElementById('mockup-sec').offsetTop-70,behavior:'smooth'})">
+    <button class="btn btn-outline btn-lg" onclick="scrollTo({top:document.getElementById('mockup-sec').offsetTop-20,behavior:'smooth'})">
       Ver como funciona
     </button>
   </div>
@@ -304,838 +175,155 @@ footer{padding:40px 18px 50px;border-top:1px solid var(--bd);text-align:center}
   </div>
 </section>
 
-<!-- MOCKUP -->
 <section class="mockup-section" id="mockup-sec">
   <div class="s-head reveal">
-    <div class="s-tag">Interface</div>
-    <h2 class="s-title">Conheça a plataforma</h2>
-    <p class="s-desc">Design pensado para facilitar ao máximo a vida do professor</p>
+    <div class="s-tag">Demonstração</div>
+    <h2 class="s-title">Veja em ação</h2>
+    <p class="s-desc">A simplicidade que você precisa para focar no que importa: seus alunos.</p>
   </div>
   <div class="mockup-wrap reveal">
     <div class="mockup-glow"></div>
     <div class="mockup-device">
       <div class="mockup-bar">
         <div class="mockup-dots"><span></span><span></span><span></span></div>
-        <div class="mockup-url">🔒 planevoraai.app</div>
+        <div style="flex:1;text-align:center;font-size:11px;color:var(--t3)">Acesso Instantâneo</div>
       </div>
-      <div class="mockup-body">
-        <div class="mockup-sidebar">
-          <div style="margin-bottom:6px;padding:0 4px"><span style="font-size:11px;color:var(--t3);letter-spacing:1.5px;text-transform:uppercase;font-weight:600">Menu</span></div>
-          <div class="m-nav-item active"><div class="m-icon">🎓</div> Criar Aula</div>
-          <div class="m-nav-item"><div class="m-icon">📚</div> Aulas Salvas</div>
-          <div class="m-nav-item"><div class="m-icon">🖼️</div> Gerar Imagens</div>
-          <div class="m-nav-item"><div class="m-icon">📅</div> Calendário</div>
-          <div class="m-nav-item"><div class="m-icon">⭐</div> Favoritas</div>
-          <div style="margin-top:auto;padding:10px 12px;border-radius:10px;background:var(--p3);border:1px solid rgba(124,95,245,.2)">
-            <div style="font-size:11px;font-weight:700;color:var(--p2);margin-bottom:4px">✦ Plano Premium</div>
-            <div style="font-size:11px;color:var(--t3)">28 dias restantes</div>
-            <div class="m-progress"><div class="m-progress-fill" style="width:62%;background:linear-gradient(90deg,var(--p),var(--g))"></div></div>
-          </div>
-        </div>
-        <div class="mockup-main">
-          <div class="m-header"><div class="m-title">✦ Nova Aula com IA</div><div class="m-badge">⚡ Pronto em 15s</div></div>
-          <div class="m-card">
-            <div class="m-card-title"><span>🌱</span> Tema selecionado</div>
-            <div style="font-size:14px;font-weight:700;margin-bottom:6px">Animais da Floresta</div>
-            <div class="m-tags">
-              <span class="m-tag m-tag-p">Pré II · 4-5 anos</span>
-              <span class="m-tag m-tag-g">45 min · 22 crianças</span>
-            </div>
-          </div>
-          <div class="m-card" style="border-color:rgba(34,211,165,.2);background:linear-gradient(145deg,var(--card),rgba(34,211,165,.04))">
-            <div class="m-card-title"><span>🤖</span> Aula gerada pela IA</div>
-            <div class="m-steps">
-              <div class="m-step done"><div class="m-step-num">✓</div><span>Objetivos e alinhamento BNCC definidos</span></div>
-              <div class="m-step done"><div class="m-step-num">✓</div><span>3 atividades lúdicas criadas</span></div>
-              <div class="m-step done"><div class="m-step-num">✓</div><span>Músicas, parlendas e livros sugeridos</span></div>
-              <div class="m-step done"><div class="m-step-num">✓</div><span>2 imagens ilustrativas geradas</span></div>
-            </div>
-          </div>
-          <div class="m-img-gen">
-            <div class="m-card-title" style="margin-bottom:10px"><span>🖼️</span> Imagens geradas <span class="m-tag m-tag-p" style="font-size:10px;padding:2px 7px">Premium</span></div>
-            <div class="m-img-grid">
-              <div class="m-img-item">🦁</div>
-              <div class="m-img-item">🌳</div>
-              <div class="m-img-item" style="background:var(--p3);border:1px dashed rgba(124,95,245,.3);font-size:18px">+</div>
-            </div>
-          </div>
-        </div>
+      <div class="mockup-video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/a10hcSJ3VFM?modestbranding=1&rel=0&controls=1&showinfo=0" 
+          title="PlanevoraAI Demo" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="feat-section" id="features">
   <div class="wrap">
     <div class="s-head reveal">
       <div class="s-tag">Funcionalidades</div>
       <h2 class="s-title">Tudo que um professor precisa</h2>
-      <p class="s-desc">De atividades lúdicas a imagens temáticas — a IA faz tudo por você</p>
     </div>
     <div class="feat-grid">
       <div class="feat-card reveal">
         <div class="feat-icon feat-icon-g">📋</div>
         <h3>Plano de Aula Completo</h3>
-        <p>Gera estrutura completa com abertura, desenvolvimento e fechamento. Passo a passo detalhado para o professor replicar sem dúvidas.</p>
+        <p>Gera estrutura completa com abertura, desenvolvimento e fechamento. Passo a passo detalhado.</p>
       </div>
-      <div class="feat-card reveal" style="transition-delay:.08s">
+      <div class="feat-card reveal">
         <div class="feat-icon feat-icon-p">🎮</div>
         <h3>Atividades Criativas</h3>
-        <p>3 a 5 atividades lúdicas por aula, com materiais, perguntas mediadoras, adaptações para NEE e dicas pedagógicas exclusivas.</p>
+        <p>Atividades lúdicas por aula, com materiais, perguntas mediadoras e adaptações para NEE.</p>
       </div>
-      <div class="feat-card reveal" style="transition-delay:.16s">
+      <div class="feat-card reveal">
         <div class="feat-icon feat-icon-r">🎵</div>
         <h3>Músicas e Parlendas</h3>
-        <p>Letra completa de cantigas temáticas, sugestões de livros com sinopse e como integrar à aula de forma dinâmica.</p>
+        <p>Letra completa de cantigas temáticas e sugestões de livros com sinopse pedagógica.</p>
       </div>
-      <div class="feat-card reveal" style="transition-delay:.24s">
+      <div class="feat-card reveal">
         <div class="feat-icon feat-icon-g">🎯</div>
         <h3>Alinhado à BNCC</h3>
-        <p>Campos de experiência e direitos de aprendizagem identificados automaticamente. Documentação pedagógica pronta.</p>
+        <p>Campos de experiência e direitos de aprendizagem identificados automaticamente na sua aula.</p>
       </div>
-      <div class="feat-card reveal" style="transition-delay:.32s">
+      <div class="feat-card reveal">
         <div class="feat-icon feat-icon-p">♿</div>
         <h3>Inclusão e NEE</h3>
-        <p>Adaptações práticas para crianças com necessidades especiais em cada atividade. Educação inclusiva facilitada.</p>
+        <p>Adaptações práticas para crianças com necessidades especiais em cada atividade sugerida.</p>
       </div>
-      <div class="feat-card feat-premium reveal" style="transition-delay:.4s">
-        <div class="feat-icon" style="background:linear-gradient(135deg,rgba(124,95,245,.2),rgba(34,211,165,.15));border:1px solid rgba(124,95,245,.3)">🖼️</div>
-        <h3>Geração de Imagens com IA</h3>
-        <p>Cria ilustrações temáticas em segundos, totalmente personalizadas para o tema da sua aula. Resultados de nível profissional.</p>
+      <div class="feat-card feat-premium reveal">
+        <div class="feat-icon" style="background:linear-gradient(135deg,rgba(124,95,245,.2),rgba(34,211,165,.15))">🖼️</div>
+        <h3>Imagens com IA</h3>
+        <p>Cria ilustrações temáticas em segundos para imprimir e usar como material de apoio.</p>
         <div class="feat-premium-badge">✦ Premium & Vitalício</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STEPS -->
-<section class="steps-section">
-  <div class="wrap">
-    <div class="s-head reveal">
-      <div class="s-tag">Simplicidade</div>
-      <h2 class="s-title">3 passos. Aula pronta.</h2>
-      <p class="s-desc">Mais simples do que qualquer método tradicional</p>
-    </div>
-    <div class="steps-grid">
-      <div class="step-card reveal">
-        <div class="step-num">1</div>
-        <h3>Escolha o tema</h3>
-        <p>Selecione de 60+ temas prontos por categoria ou escreva o seu próprio. Informe a faixa etária e sua intenção.</p>
-      </div>
-      <div class="step-card reveal" style="transition-delay:.12s">
-        <div class="step-num">2</div>
-        <h3>IA cria tudo</h3>
-        <p>Em 15 a 25 segundos, sua aula completa fica pronta: atividades, materiais, músicas, avaliação e imagens.</p>
-      </div>
-      <div class="step-card reveal" style="transition-delay:.24s">
-        <div class="step-num">3</div>
-        <h3>Use amanhã</h3>
-        <p>Salve, imprima ou copie. Plano profissional alinhado à BNCC pronto para sua turma.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section class="review-section" id="testimonials">
-  <div class="wrap">
-    <div class="s-head reveal">
-      <div class="s-tag">Depoimentos</div>
-      <h2 class="s-title">Professores que já transformaram suas aulas</h2>
-      <p class="s-desc">Mais de 500 professores usando a PlanevoraAI todo dia</p>
-    </div>
-    <div class="review-grid">
-      <div class="r-card reveal">
-        <div class="r-stars">★★★★★</div>
-        <p class="r-text">"Antes eu gastava 3 horas todo domingo planejando a semana. Hoje levo 20 minutos com a PlanevoraAI. As aulas ficaram muito mais criativas e as crianças adoram!"</p>
-        <div class="r-author">
-          <div class="r-avatar" style="background:linear-gradient(135deg,#7c5ff5,#a855f7)">A</div>
-          <div>
-            <div class="r-name">Ana Claudia Santos</div>
-            <div class="r-role">Professora de Ed. Infantil · Recife, PE</div>
-          </div>
-        </div>
-      </div>
-      <div class="r-card reveal" style="transition-delay:.1s">
-        <div class="r-stars">★★★★★</div>
-        <p class="r-text">"A geração de imagens é incrível! Colo no mural da sala e as crianças ficam encantadas. A coordenação ficou impressionada com a qualidade dos planos de aula."</p>
-        <div class="r-author">
-          <div class="r-avatar" style="background:linear-gradient(135deg,#22d3a5,#0ea5e9)">M</div>
-          <div>
-            <div class="r-name">Marcia Ferreira</div>
-            <div class="r-role">Professora Pré-escola · São Paulo, SP</div>
-          </div>
-        </div>
-      </div>
-      <div class="r-card reveal" style="transition-delay:.2s">
-        <div class="r-stars">★★★★★</div>
-        <p class="r-text">"Comprei o acesso vitalício e foi a melhor decisão que tomei. Economizo horas toda semana e minhas aulas são muito mais ricas do que quando eu planejava sozinha."</p>
-        <div class="r-author">
-          <div class="r-avatar" style="background:linear-gradient(135deg,#f472b6,#f59e0b)">P</div>
-          <div>
-            <div class="r-name">Patrícia Oliveira</div>
-            <div class="r-role">Coordenadora Pedagógica · BH, MG</div>
-          </div>
-        </div>
-      </div>
-      <div class="r-card reveal" style="transition-delay:.3s">
-        <div class="r-stars">★★★★★</div>
-        <p class="r-text">"O alinhamento com a BNCC automático me salvou. A supervisão exige essa documentação e antes eu ficava horas pesquisando. Agora vem tudo pronto e correto!"</p>
-        <div class="r-author">
-          <div class="r-avatar" style="background:linear-gradient(135deg,#0ea5e9,#22d3a5)">J</div>
-          <div>
-            <div class="r-name">Juliana Mendes</div>
-            <div class="r-role">Professora Municipal · Fortaleza, CE</div>
-          </div>
-        </div>
-      </div>
-      <div class="r-card reveal" style="transition-delay:.4s">
-        <div class="r-stars">★★★★★</div>
-        <p class="r-text">"Uso no plano básico e já vale muito! Os planos de aula são detalhados demais, com passos para cada atividade. Minha turma ficou mais engajada desde que comecei a usar."</p>
-        <div class="r-author">
-          <div class="r-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">L</div>
-          <div>
-            <div class="r-name">Luciana Rodrigues</div>
-            <div class="r-role">Professora Berçário · Porto Alegre, RS</div>
-          </div>
-        </div>
-      </div>
-      <div class="r-card reveal" style="transition-delay:.5s">
-        <div class="r-stars">★★★★★</div>
-        <p class="r-text">"Comecei no básico e migrei pro premium em 3 dias. As imagens geradas pela IA para decorar a sala e fazer cartazes são perfeitas. Vale cada centavo!"</p>
-        <div class="r-author">
-          <div class="r-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">R</div>
-          <div>
-            <div class="r-name">Renata Costa</div>
-            <div class="r-role">Professora Ed. Infantil · Curitiba, PR</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
 <section class="pricing-section" id="pricing">
   <div class="wrap">
     <div class="s-head reveal">
       <div class="s-tag">Planos</div>
       <h2 class="s-title">Invista na sua carreira</h2>
-      <p class="s-desc">Escolha o plano ideal e tenha acesso em menos de 2 minutos após o pagamento</p>
+      <p class="s-desc">Escolha o plano ideal e recupere suas horas de descanso.</p>
     </div>
     <div class="pricing-grid">
 
-      <!-- BÁSICO -->
       <div class="p-card reveal">
         <div class="p-plan">Plano Básico</div>
-        <div class="p-price"><span>R$</span> 29<span style="font-size:28px">,90</span></div>
+        <div class="p-price"><span>R$</span> 29<span style="font-size:24px">,90</span></div>
         <div class="p-price-note">por mês · renovação mensal</div>
         <div class="p-divider"></div>
         <div class="p-feat-list">
-          <div class="p-feat"><span class="p-feat-check">✓</span> Criação de planos de aula completos</div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> 60+ temas para educação infantil</div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> Atividades detalhadas passo a passo</div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> Músicas, parlendas e livros sugeridos</div>
+          <div class="p-feat"><span class="p-feat-check">✓</span> Planos de aula completos</div>
+          <div class="p-feat"><span class="p-feat-check">✓</span> 60+ temas educação infantil</div>
+          <div class="p-feat"><span class="p-feat-check">✓</span> Atividades passo a passo</div>
+          <div class="p-feat"><span class="p-feat-check">✓</span> Músicas e livros sugeridos</div>
           <div class="p-feat"><span class="p-feat-check">✓</span> Alinhamento BNCC automático</div>
           <div class="p-feat"><span class="p-feat-check">✓</span> Adaptações para NEE incluídas</div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> Aulas salvas ilimitadas</div>
           <div class="p-feat off"><span class="p-feat-x">✕</span> Geração de imagens com IA</div>
-          <div class="p-feat off"><span class="p-feat-x">✕</span> Imagens temáticas personalizadas</div>
         </div>
         <a href="https://go.perfectpay.com.br/PPU38CQ9756" target="_blank" class="btn btn-outline p-cta">Assinar Básico</a>
       </div>
 
-      <!-- PREMIUM -->
-      <div class="p-card popular reveal" style="transition-delay:.1s">
+      <div class="p-card popular reveal">
         <div class="p-badge p-badge-pop">⚡ MAIS POPULAR</div>
         <div class="p-plan" style="color:var(--p2)">Plano Premium</div>
-        <div class="p-price" style="background:linear-gradient(135deg,var(--p2),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent"><span>R$</span> 49<span style="font-size:28px">,90</span></div>
+        <div class="p-price" style="background:linear-gradient(135deg,var(--p2),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent"><span>R$</span> 49<span style="font-size:24px">,90</span></div>
         <div class="p-price-note">por mês · renovação mensal</div>
         <div class="p-divider"></div>
         <div class="p-feat-list">
-          <div class="p-feat"><span class="p-feat-check">✓</span> <strong>Tudo do plano Básico</strong></div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> Criação de planos de aula completos</div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> 60+ temas para educação infantil</div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> Atividades detalhadas passo a passo</div>
+          <div class="p-feat"><strong>Tudo do plano Básico</strong></div>
           <div class="p-feat" style="color:var(--g2)"><span class="p-feat-check">✓</span> <strong>Geração de imagens com IA ✦</strong></div>
-          <div class="p-feat" style="color:var(--g2)"><span class="p-feat-check">✓</span> <strong>Imagens em segundos por tema ✦</strong></div>
-          <div class="p-feat" style="color:var(--g2)"><span class="p-feat-check">✓</span> <strong>Agente IA gera imagens em tempo real ✦</strong></div>
+          <div class="p-feat" style="color:var(--g2)"><span class="p-feat-check">✓</span> <strong>Imagens temáticas rápidas ✦</strong></div>
+          <div class="p-feat" style="color:var(--g2)"><span class="p-feat-check">✓</span> <strong>Agente IA em tempo real ✦</strong></div>
           <div class="p-feat"><span class="p-feat-check">✓</span> Aulas salvas ilimitadas</div>
         </div>
-        <a href="https://go.perfectpay.com.br/PPU38CQ9768" target="_blank" class="btn btn-primary p-cta" style="background:linear-gradient(135deg,var(--p),#a855f7)">Assinar Premium</a>
+        <a href="https://go.perfectpay.com.br/PPU38CQ9768" target="_blank" class="btn btn-primary p-cta">Assinar Premium</a>
       </div>
 
-      <!-- VITALÍCIO -->
-      <div class="p-card lifetime reveal" style="transition-delay:.2s">
+      <div class="p-card lifetime reveal">
         <div class="p-badge p-badge-life">♾️ MELHOR NEGÓCIO</div>
         <div class="p-plan" style="color:var(--g2)">Acesso Vitalício</div>
         <div class="p-price" style="background:linear-gradient(135deg,var(--g2),#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent"><span>R$</span> 96</div>
-        <div class="p-price-note">pagamento único · sem mensalidade nunca</div>
-        <div class="p-divider" style="background:rgba(34,211,165,.2)"></div>
+        <div class="p-price-note">pagamento único · para sempre</div>
+        <div class="p-divider"></div>
         <div class="p-feat-list">
-          <div class="p-feat" style="color:var(--g2)"><span class="p-feat-check">✓</span> <strong>Acesso completo para sempre</strong></div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> Tudo do plano Premium incluído</div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> Geração de imagens com IA ilimitada</div>
+          <div class="p-feat" style="color:var(--g2)"><span class="p-feat-check">✓</span> <strong>Acesso completo vitalício</strong></div>
+          <div class="p-feat"><span class="p-feat-check">✓</span> Tudo do Premium incluído</div>
+          <div class="p-feat"><span class="p-feat-check">✓</span> Imagens IA ilimitadas</div>
           <div class="p-feat"><span class="p-feat-check">✓</span> Todas as atualizações futuras</div>
-          <div class="p-feat"><span class="p-feat-check">✓</span> Nenhuma cobrança recorrente</div>
-          <div class="p-feat" style="color:var(--g2)"><span class="p-feat-check">✓</span> <strong>Economia de R$503/ano vs Premium</strong></div>
+          <div class="p-feat" style="color:var(--g2)"><span class="p-feat-check">✓</span> <strong>Sem mensalidades</strong></div>
         </div>
-        <a href="https://pay.lowify.com.br/checkout.php?product_id=txbM2s" target="_blank" class="btn btn-green p-cta">Garantir Acesso Vitalício</a>
-        <div class="p-saving">🔥 Economize R$503 por ano</div>
+        <a href="https://pay.lowify.com.br/checkout.php?product_id=txbM2s" target="_blank" class="btn btn-green p-cta">Garantir Vitalício</a>
       </div>
 
     </div>
-    <p style="text-align:center;font-size:13px;color:var(--t3);margin-top:28px">🔒 Pagamento seguro · Acesso liberado automaticamente por e-mail em até 2 minutos</p>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="faq-section">
-  <div class="wrap">
-    <div class="s-head reveal">
-      <div class="s-tag">Dúvidas</div>
-      <h2 class="s-title">Perguntas frequentes</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item"><button class="faq-q">Como recebo o acesso após o pagamento? <span class="faq-chevron">&#8964;</span></button><div class="faq-a">Assim que o pagamento for confirmado (geralmente em menos de 2 minutos), você receberá um e-mail com seu token de acesso exclusivo. É só clicar no link do e-mail para entrar na plataforma imediatamente.</div></div>
-      <div class="faq-item"><button class="faq-q">O que acontece quando minha assinatura vence? <span class="faq-chevron">&#8964;</span></button><div class="faq-a">Para os planos mensais, o acesso é bloqueado automaticamente no dia do vencimento caso não haja renovação. Você verá uma tela de aviso com o botão de suporte via WhatsApp para regularizar rapidamente.</div></div>
-      <div class="faq-item"><button class="faq-q">Posso usar no celular? <span class="faq-chevron">&#8964;</span></button><div class="faq-a">Sim! A PlanevoraAI é 100% otimizada para mobile. Funciona perfeitamente no navegador do seu celular, sem precisar baixar nenhum aplicativo.</div></div>
-      <div class="faq-item"><button class="faq-q">A geração de imagens está inclusa em todos os planos? <span class="faq-chevron">&#8964;</span></button><div class="faq-a">A geração de imagens com IA está disponível apenas nos planos Premium (R$49,90/mês) e Vitalício (R$96 único). O plano Básico inclui todos os planos de aula completos, mas sem a geração de imagens.</div></div>
-      <div class="faq-item"><button class="faq-q">O acesso vitalício realmente não tem mais cobranças? <span class="faq-chevron">&#8964;</span></button><div class="faq-a">Exatamente! É um único pagamento de R$96 e você tem acesso completo a tudo, incluindo todas as atualizações futuras, sem nunca pagar mais nada.</div></div>
-      <div class="faq-item"><button class="faq-q">Preciso ter conhecimento de tecnologia? <span class="faq-chevron">&#8964;</span></button><div class="faq-a">Nenhum! A plataforma foi projetada para ser extremamente simples. Se você sabe usar o WhatsApp, consegue usar a PlanevoraAI. São apenas 3 cliques para ter sua aula pronta.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="cta-section">
-  <div class="cta-bg"></div>
-  <div class="wrap-sm">
-    <div class="reveal">
-      <div class="s-tag" style="margin-bottom:20px">Comece hoje</div>
-      <h2 class="cta-title">Transforme suas aulas.<br/><span class="hero-grad">Recupere seu tempo livre.</span></h2>
-      <p style="color:var(--t2);font-size:16px;line-height:1.75;margin:18px auto 34px;max-width:480px">Junte-se a mais de 500 professores que já economizam horas toda semana com a PlanevoraAI.</p>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-        <a href="https://go.perfectpay.com.br/PPU38CQ9756" target="_blank" class="btn btn-outline btn-lg">Plano Básico · R$29,90</a>
-        <a href="https://go.perfectpay.com.br/PPU38CQ9768" target="_blank" class="btn btn-primary btn-lg">Premium · R$49,90/mês</a>
-        <a href="https://pay.lowify.com.br/checkout.php?product_id=txbM2s" target="_blank" class="btn btn-green btn-lg">Vitalício · R$96</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">
     <div class="logo-icon" style="width:32px;height:32px;font-size:15px">✦</div>
     <span class="logo-txt" style="font-size:16px">PlanevoraAI</span>
   </div>
-  <p class="footer-copy">© 2025 PlanevoraAI · IA Exclusiva para Professores de Educação Infantil</p>
-  <p class="footer-copy" style="margin-top:6px">Suporte: <a href="https://wa.me/5577998227790?text=Ol%C3%A1%2C+quero+falar+sobre+minha+assinatura." target="_blank" style="color:var(--g2)">WhatsApp</a></p>
+  <p class="footer-copy">© 2026 PlanevoraAI · IA para Professores</p>
+  <p class="footer-copy" style="margin-top:6px">Suporte: <a href="https://wa.me/5577998227790" target="_blank" style="color:var(--g2)">WhatsApp</a></p>
 </footer>
-</div><!-- /landing-section -->
-
-<!-- APP SECTION -->
-<div id="app-section">
-  <div class="app-topbar" id="appTopbar">
-    <div class="app-topbar-logo">
-      <div class="logo-icon" style="width:30px;height:30px;font-size:14px">✦</div>
-      <span class="logo-txt" style="font-size:16px">PlanevoraAI</span>
-    </div>
-    <div class="app-user-info">
-      <span id="userEmailDisplay" style="display:none"></span>
-      <span id="userPlanBadge" class="app-plan-badge"></span>
-      <span id="daysLeftBadge" class="days-badge" style="display:none"></span>
-      <button class="app-logout" onclick="handleLogout()">Sair</button>
-    </div>
-  </div>
-  <!-- CONTEÚDO DO APP INJETADO AQUI -->
-  <div id="appContent" style="min-height:80vh;display:flex;align-items:center;justify-content:center;padding:40px 18px">
-    <div style="text-align:center;max-width:480px">
-      <div style="font-size:72px;margin-bottom:20px">✦</div>
-      <h2 style="font-family:var(--head);font-size:28px;font-weight:800;margin-bottom:12px">Bem-vindo à PlanevoraAI!</h2>
-      <p style="color:var(--t2);font-size:15px;line-height:1.7;margin-bottom:30px">Acesso liberado com sucesso. A plataforma completa será carregada aqui.<br/>Conecte o app do EduPlay/PlanevoraAI neste espaço.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px">
-        <div style="padding:20px;border-radius:16px;background:var(--card);border:1px solid var(--bd);text-align:center">
-          <div style="font-size:28px;margin-bottom:8px">📋</div>
-          <div style="font-size:14px;font-weight:700;margin-bottom:4px">Criar Aula</div>
-          <div style="font-size:12px;color:var(--t2)">Gere planos completos</div>
-        </div>
-        <div style="padding:20px;border-radius:16px;background:var(--card);border:1px solid var(--bd);text-align:center">
-          <div style="font-size:28px;margin-bottom:8px">💾</div>
-          <div style="font-size:14px;font-weight:700;margin-bottom:4px">Aulas Salvas</div>
-          <div style="font-size:12px;color:var(--t2)">Acesse seu histórico</div>
-        </div>
-      </div>
-      <p style="font-size:12px;color:var(--t3)">Plano: <span id="planDisplayInApp"></span></p>
-    </div>
-  </div>
 </div>
 
-<!-- EXPIRED SCREEN -->
-<div id="expired-section" style="display:none">
-  <div class="app-topbar">
-    <div class="app-topbar-logo">
-      <div class="logo-icon" style="width:30px;height:30px;font-size:14px">✦</div>
-      <span class="logo-txt" style="font-size:16px">PlanevoraAI</span>
-    </div>
-  </div>
-  <div class="expired-screen">
-    <div style="width:80px;height:80px;border-radius:50%;background:rgba(244,114,182,.1);border:1px solid rgba(244,114,182,.3);display:flex;align-items:center;justify-content:center;font-size:36px">🔒</div>
-    <h2>Acesso suspenso</h2>
-    <p>Sua assinatura venceu em <strong id="expiredDate" style="color:var(--rose)"></strong>.<br/>Renove agora para voltar a criar aulas incríveis!</p>
-    <div style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:320px">
-      <a href="https://go.perfectpay.com.br/PPU38CQ9768" target="_blank" class="btn btn-primary btn-lg" style="justify-content:center">🔓 Renovar Premium · R$49,90</a>
-      <a href="https://go.perfectpay.com.br/PPU38CQ9756" target="_blank" class="btn btn-outline btn-lg" style="justify-content:center">Renovar Básico · R$29,90</a>
-      <a href="https://pay.lowify.com.br/checkout.php?product_id=txbM2s" target="_blank" class="btn btn-green btn-lg" style="justify-content:center">Garantir Vitalício · R$96</a>
-    </div>
-    <div style="margin-top:28px;padding:16px 20px;border-radius:16px;background:var(--card);border:1px solid var(--bd);max-width:320px;width:100%">
-      <p style="font-size:13px;color:var(--t2);margin-bottom:12px">Já renovou e não recebeu o acesso?</p>
-      <a href="https://wa.me/5577998227790?text=Ol%C3%A1%2C+quero+falar+sobre+minha+assinatura." target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;gap:8px">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M11.976 0C5.372 0 0 5.373 0 11.977c0 2.11.556 4.09 1.523 5.806L0 24l6.388-1.491A11.93 11.93 0 0011.976 24c6.604 0 11.976-5.373 11.976-11.977C23.952 5.373 18.58 0 11.976 0zm0 21.898a9.893 9.893 0 01-5.041-1.376l-.362-.215-3.75.875.946-3.655-.236-.374A9.858 9.858 0 012.077 11.977C2.077 6.527 6.526 2.077 11.976 2.077c5.451 0 9.899 4.45 9.899 9.9 0 5.45-4.448 9.921-9.899 9.921z"/></svg>
-        Falar no WhatsApp · Suporte
-      </a>
-      <p style="font-size:11px;color:var(--t3);margin-top:8px;text-align:center">(77) 9 9822-7790</p>
-    </div>
-    <button onclick="handleLogout()" style="margin-top:20px;background:none;border:none;cursor:pointer;color:var(--t3);font-size:13px;text-decoration:underline">Voltar para a página inicial</button>
-  </div>
-</div>
-
-<!-- MODAIS -->
-<div class="modal-overlay" id="accessModal">
-  <div class="modal-box" id="accessModalBox">
-    <div class="modal-icon modal-icon-lock">🔑</div>
-    <h2 class="modal-title">Acessar PlanevoraAI</h2>
-    <p class="modal-sub">Insira o token de acesso que você recebeu por e-mail após a confirmação do pagamento.</p>
-    <div id="modalErr" class="modal-err">Token inválido ou expirado. Verifique seu e-mail ou entre em contato com o suporte.</div>
-    <input type="text" class="modal-input" id="tokenInput" placeholder="Cole seu token aqui..." autocomplete="off"/>
-    <button class="btn btn-primary modal-btn" onclick="verifyToken()">Entrar na plataforma</button>
-    <p class="modal-note">Não recebeu o e-mail? <a href="https://wa.me/5577998227790?text=Ol%C3%A1%2C+quero+falar+sobre+minha+assinatura." target="_blank" style="color:var(--p2)">Fale com o suporte</a></p>
-    <button onclick="closeModal('accessModal')" style="display:block;margin:12px auto 0;background:none;border:none;cursor:pointer;color:var(--t3);font-size:12px">Fechar</button>
-  </div>
-</div>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/5577998227790?text=Ol%C3%A1%2C+quero+falar+sobre+minha+assinatura." target="_blank" class="wpp-btn" id="wppBtn">
+<a href="https://wa.me/5577998227790" target="_blank" class="wpp-btn">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M11.976 0C5.372 0 0 5.373 0 11.977c0 2.11.556 4.09 1.523 5.806L0 24l6.388-1.491A11.93 11.93 0 0011.976 24c6.604 0 11.976-5.373 11.976-11.977C23.952 5.373 18.58 0 11.976 0zm0 21.898a9.893 9.893 0 01-5.041-1.376l-.362-.215-3.75.875.946-3.655-.236-.374A9.858 9.858 0 012.077 11.977C2.077 6.527 6.526 2.077 11.976 2.077c5.451 0 9.899 4.45 9.899 9.9 0 5.45-4.448 9.921-9.899 9.921z"/></svg>
 </a>
-<div class="wpp-tooltip">Suporte via WhatsApp</div>
 
 <script>
-// ══════════════════════════════════════════════════════
-// PLANEVORAAI — SISTEMA DE ACESSO COM DISPOSITIVO ÚNICO
-// ══════════════════════════════════════════════════════
-const API_URL = 'https://sua-api.planevoraai.app'; // ← troque pela URL do seu Railway/Render
-
-const PLAN_NAMES  = { basic:'Básico', premium:'Premium', lifetime:'Vitalício' };
-const PLAN_LABELS = { basic:'app-plan-basic', premium:'app-plan-premium', lifetime:'app-plan-lifetime' };
-const WPP_LINK    = 'https://wa.me/5577998227790?text=Ol%C3%A1%2C+quero+falar+sobre+minha+assinatura.';
-
-// ──────────────────────────────────────────────────────
-// 1. DEVICE FINGERPRINT
-// Gera uma impressão digital única do dispositivo
-// baseada em ~12 propriedades do navegador/hardware.
-// Não usa cookies nem localStorage — é calculado a partir
-// do próprio hardware + navegador toda vez.
-// ──────────────────────────────────────────────────────
-async function getDeviceFingerprint() {
-  const components = [
-    navigator.userAgent,
-    navigator.language || navigator.userLanguage || '',
-    String(screen.width) + 'x' + String(screen.height),
-    String(screen.colorDepth),
-    Intl.DateTimeFormat().resolvedOptions().timeZone || '',
-    String(navigator.hardwareConcurrency || 0),
-    String(navigator.deviceMemory || 0),
-    navigator.platform || '',
-    String(new Date().getTimezoneOffset()),
-  ];
-
-  // Canvas fingerprint (pequena diferença de renderização por GPU/driver)
-  try {
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = 200; canvas.height = 50;
-    ctx.textBaseline = 'top';
-    ctx.font = '14px Arial';
-    ctx.fillStyle = '#7c5ff5';
-    ctx.fillRect(0, 0, 200, 50);
-    ctx.fillStyle = '#22d3a5';
-    ctx.fillText('PlanevoraAI🔒', 10, 10);
-    ctx.strokeStyle = '#f472b6';
-    ctx.strokeRect(5, 5, 190, 40);
-    components.push(canvas.toDataURL());
-  } catch (_) {}
-
-  // Audio context fingerprint
-  try {
-    const ac = new (window.AudioContext || window.webkitAudioContext)();
-    const osc = ac.createOscillator();
-    const analyser = ac.createAnalyser();
-    const gain = ac.createGain();
-    gain.gain.value = 0;
-    osc.connect(analyser);
-    analyser.connect(gain);
-    gain.connect(ac.destination);
-    osc.start(0);
-    const freqs = new Float32Array(analyser.frequencyBinCount);
-    analyser.getFloatFrequencyData(freqs);
-    components.push(String(freqs.slice(0, 10).join(',')));
-    osc.stop();
-    ac.close();
-  } catch (_) {}
-
-  // Hash com SubtleCrypto (SHA-256)
-  const raw = components.join('|||');
-  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(raw));
-  const hash = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
-  return hash.slice(0, 32); // 32 chars é suficiente
-}
-
-// ──────────────────────────────────────────────────────
-// 2. STORAGE — sessão salva em localStorage + sessionStorage
-// ──────────────────────────────────────────────────────
-function getSession() {
-  try { return JSON.parse(localStorage.getItem('planev_sess') || 'null'); } catch { return null; }
-}
-function setSession(s) {
-  localStorage.setItem('planev_sess', JSON.stringify(s));
-  sessionStorage.setItem('planev_sess_cache', JSON.stringify(s)); // cache da sessão ativa
-}
-function clearSession() {
-  localStorage.removeItem('planev_sess');
-  sessionStorage.removeItem('planev_sess_cache');
-}
-
-// Dispositivo vinculado (separado da sessão para persistência)
-function getLinkedDevice(token) {
-  try { return JSON.parse(localStorage.getItem('planev_dev_' + token) || 'null'); } catch { return null; }
-}
-function setLinkedDevice(token, fp) {
-  localStorage.setItem('planev_dev_' + token, JSON.stringify({ fp, ts: Date.now() }));
-}
-
-// ──────────────────────────────────────────────────────
-// 3. BLOQUEIO DE DOMÍNIO DIRETO
-// Detecta quando o domínio está sendo acessado direto
-// (sem token salvo e sem vir de um link válido)
-// ──────────────────────────────────────────────────────
-function checkDirectAccess() {
-  const session = getSession();
-  const urlToken = new URLSearchParams(location.search).get('token');
-  // Se não tem sessão e não tem token na URL, mostra apenas a landing (sem app)
-  // A landing já está visível por padrão, não precisamos fazer nada adicional
-  return { hasSession: !!session, hasUrlToken: !!urlToken };
-}
-
-// ──────────────────────────────────────────────────────
-// 4. INICIALIZAÇÃO — executa ao carregar a página
-// ──────────────────────────────────────────────────────
-window.addEventListener('load', async () => {
-  // Verifica token na URL (link do e-mail: ?token=premium-XXXXX-XXXXX)
-  const urlParams = new URLSearchParams(location.search);
-  const urlToken = urlParams.get('token');
-  if (urlToken) {
-    // Limpa o token da URL sem recarregar
-    history.replaceState(null, '', location.pathname);
-    document.getElementById('tokenInput').value = urlToken;
-    await verifyToken(urlToken);
-    return;
-  }
-
-  // Verifica sessão existente
-  const session = getSession();
-  if (session?.token) {
-    await validateSession(session);
-  }
-});
-
-// ──────────────────────────────────────────────────────
-// 5. VALIDAR SESSÃO EXISTENTE
-// ──────────────────────────────────────────────────────
-async function validateSession(session) {
-  try {
-    const fp = await getDeviceFingerprint();
-    const linked = getLinkedDevice(session.token);
-
-    // Verifica se o dispositivo bate
-    if (linked && linked.fp !== fp) {
-      showDeviceMismatch(session.token);
-      return;
-    }
-
-    // Tenta validar com servidor
-    const res = await fetch(`${API_URL}/api/auth/validate`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ token: session.token, fingerprint: fp })
-    }).catch(() => null);
-
-    if (res?.ok) {
-      const data = await res.json();
-      if (data.valid) {
-        const updated = { ...session, ...data.user };
-        setSession(updated);
-        setLinkedDevice(session.token, fp);
-        showApp(updated);
-        return;
-      }
-      if (data.deviceMismatch) { showDeviceMismatch(session.token); return; }
-      if (data.expired) { showExpired(session); return; }
-    }
-    // Fallback offline
-    validateLocal(session, fp);
-  } catch {
-    validateLocal(session, null);
-  }
-}
-
-function validateLocal(session, fp) {
-  if (!session?.token) return;
-  if (session.plan === 'lifetime') { showApp(session); return; }
-  if (session.expiresAt && new Date() > new Date(session.expiresAt)) {
-    showExpired(session); return;
-  }
-  showApp(session);
-}
-
-// ──────────────────────────────────────────────────────
-// 6. VERIFICAR TOKEN (login)
-// ──────────────────────────────────────────────────────
-async function verifyToken(tokenOverride) {
-  const token = (tokenOverride || document.getElementById('tokenInput').value || '').trim();
-  if (!token) return;
-
-  const errEl = document.getElementById('modalErr');
-  const btnEl = document.querySelector('.modal-btn');
-  errEl.style.display = 'none';
-  if (btnEl) { btnEl.disabled = true; btnEl.textContent = 'Verificando...'; }
-
-  try {
-    const fp = await getDeviceFingerprint();
-
-    // Tenta com servidor
-    const res = await fetch(`${API_URL}/api/auth/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ token, fingerprint: fp })
-    }).catch(() => null);
-
-    if (res?.ok) {
-      const data = await res.json();
-      if (data.success) {
-        setSession(data.session);
-        setLinkedDevice(token, fp);
-        closeModal('accessModal');
-        showApp(data.session);
-        return;
-      }
-      if (data.deviceMismatch) {
-        showModalError('🔒 Este token já está vinculado a outro dispositivo. Um token só pode ser usado em um único aparelho. Entre em contato com o suporte se precisar de ajuda.', true);
-        return;
-      }
-      if (data.expired) {
-        showModalError('⏰ Sua assinatura expirou. Renove para continuar acessando a plataforma.');
-        return;
-      }
-      showModalError('Token inválido ou não encontrado. Verifique o e-mail e tente novamente.');
-      return;
-    }
-
-    // Fallback local (sem servidor)
-    await localLoginFallback(token, fp);
-  } catch (err) {
-    await localLoginFallback(token, null);
-  } finally {
-    if (btnEl) { btnEl.disabled = false; btnEl.textContent = 'Entrar na plataforma'; }
-  }
-}
-
-async function localLoginFallback(token, fp) {
-  const match = token.match(/^(basic|premium|lifetime)-([A-Z0-9]{5})-([A-Z0-9]{5})$/i);
-  if (!match) {
-    showModalError('Token inválido. Verifique o e-mail recebido após o pagamento.');
-    return;
-  }
-
-  // Verifica se já vinculado a outro dispositivo
-  const linked = getLinkedDevice(token);
-  if (linked && fp && linked.fp !== fp) {
-    showModalError('🔒 Este token já está sendo usado em outro dispositivo. Acesso negado.\n\nCaso precise de suporte, entre em contato pelo WhatsApp.', true);
-    return;
-  }
-
-  const plan = match[1].toLowerCase();
-  const now = new Date();
-  const exp = plan === 'lifetime' ? null : new Date(now.getTime() + 30*24*60*60*1000);
-  const session = { token, email:'', plan, createdAt:now.toISOString(), expiresAt:exp?.toISOString()||null };
-  setSession(session);
-  if (fp) setLinkedDevice(token, fp);
-  closeModal('accessModal');
-  showApp(session);
-}
-
-function showModalError(msg, showWpp = false) {
-  const errEl = document.getElementById('modalErr');
-  errEl.style.display = 'block';
-  errEl.innerHTML = msg.replace(/\n/g, '<br/>') +
-    (showWpp ? `<br/><br/><a href="${WPP_LINK}" target="_blank" style="color:#a889ff;font-weight:700">📲 Falar no WhatsApp</a>` : '');
-}
-
-// ──────────────────────────────────────────────────────
-// 7. TELA: DISPOSITIVO DIFERENTE
-// ──────────────────────────────────────────────────────
-function showDeviceMismatch(token) {
-  clearSession();
-  document.getElementById('landing-section').style.display = 'none';
-  document.getElementById('app-section').style.display = 'none';
-  document.getElementById('expired-section').style.display = 'none';
-  document.getElementById('mainNav').style.display = 'none';
-
-  // Cria tela de mismatch dinamicamente
-  let el = document.getElementById('device-mismatch-screen');
-  if (!el) {
-    el = document.createElement('div');
-    el.id = 'device-mismatch-screen';
-    document.body.appendChild(el);
-  }
-  el.style.display = 'flex';
-  el.style.cssText = `
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    min-height:100vh;padding:40px 18px;text-align:center;background:var(--bg);
-  `;
-  el.innerHTML = `
-    <div style="width:80px;height:80px;border-radius:50%;background:rgba(244,114,182,.12);
-      border:1px solid rgba(244,114,182,.3);display:flex;align-items:center;
-      justify-content:center;font-size:36px;margin-bottom:22px">🔒</div>
-    <h2 style="font-family:var(--head);font-size:26px;font-weight:800;margin-bottom:12px;color:var(--t1)">
-      Acesso negado
-    </h2>
-    <p style="color:var(--t2);font-size:15px;line-height:1.75;max-width:420px;margin-bottom:10px">
-      Este token já está <strong style="color:var(--rose)">vinculado a outro dispositivo</strong>.
-    </p>
-    <div style="background:var(--card);border:1px solid rgba(244,114,182,.25);border-radius:16px;
-      padding:20px 24px;max-width:420px;width:100%;margin-bottom:28px">
-      <p style="color:var(--t2);font-size:14px;line-height:1.8;margin:0">
-        ⚠️ Cada token de acesso funciona em <strong style="color:var(--t1)">um único aparelho</strong>.<br/>
-        Caso este token tenha sido compartilhado com terceiros, o acesso original será
-        <strong style="color:var(--rose)">cancelado automaticamente</strong>.<br/><br/>
-        Se você é o titular e precisa trocar de dispositivo, entre em contato com o suporte.
-      </p>
-    </div>
-    <a href="${WPP_LINK}" target="_blank"
-      style="display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:50px;
-      background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;font-weight:800;
-      font-size:15px;text-decoration:none;margin-bottom:14px">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
-        <path d="M11.976 0C5.372 0 0 5.373 0 11.977c0 2.11.556 4.09 1.523 5.806L0 24l6.388-1.491A11.93 11.93 0 0011.976 24c6.604 0 11.976-5.373 11.976-11.977C23.952 5.373 18.58 0 11.976 0zm0 21.898a9.893 9.893 0 01-5.041-1.376l-.362-.215-3.75.875.946-3.655-.236-.374A9.858 9.858 0 012.077 11.977C2.077 6.527 6.526 2.077 11.976 2.077c5.451 0 9.899 4.45 9.899 9.9 0 5.45-4.448 9.921-9.899 9.921z"/>
-      </svg>
-      Falar com suporte
-    </a>
-    <p style="font-size:12px;color:var(--t3)">(77) 9 9822-7790</p>
-    <button onclick="handleLogout()"
-      style="margin-top:16px;background:none;border:none;cursor:pointer;
-      color:var(--t3);font-size:13px;text-decoration:underline">
-      Voltar para a página inicial
-    </button>
-  `;
-}
-
-// ──────────────────────────────────────────────────────
-// 8. SHOW APP / SHOW EXPIRED
-// ──────────────────────────────────────────────────────
-function showApp(session) {
-  document.getElementById('landing-section').style.display = 'none';
-  document.getElementById('expired-section').style.display = 'none';
-  document.getElementById('app-section').style.display = 'block';
-  document.getElementById('mainNav').style.display = 'none';
-  document.getElementById('wppBtn').style.display = 'flex';
-  const dm = document.getElementById('device-mismatch-screen');
-  if (dm) dm.style.display = 'none';
-
-  const planBadge = document.getElementById('userPlanBadge');
-  planBadge.textContent = '✦ ' + (PLAN_NAMES[session.plan] || session.plan);
-  planBadge.className = 'app-plan-badge ' + (PLAN_LABELS[session.plan] || 'app-plan-basic');
-  document.getElementById('planDisplayInApp').textContent = PLAN_NAMES[session.plan] || session.plan;
-
-  if (session.email) {
-    const el = document.getElementById('userEmailDisplay');
-    el.textContent = session.email;
-    el.style.display = 'inline';
-  }
-
-  if (session.plan !== 'lifetime' && session.expiresAt) {
-    const days = Math.ceil((new Date(session.expiresAt) - new Date()) / 86400000);
-    const badge = document.getElementById('daysLeftBadge');
-    badge.style.display = 'inline';
-    badge.classList.toggle('exp', days <= 5);
-    badge.textContent = days <= 5 ? `⚠️ ${days}d restantes` : `${days} dias`;
-  }
-}
-
-function showExpired(session) {
-  document.getElementById('landing-section').style.display = 'none';
-  document.getElementById('app-section').style.display = 'none';
-  document.getElementById('expired-section').style.display = 'block';
-  document.getElementById('mainNav').style.display = 'none';
-  const dm = document.getElementById('device-mismatch-screen');
-  if (dm) dm.style.display = 'none';
-  document.getElementById('expiredDate').textContent =
-    session.expiresAt ? new Date(session.expiresAt).toLocaleDateString('pt-BR') : 'data não disponível';
-}
-
-function handleLogout() {
-  clearSession();
-  const dm = document.getElementById('device-mismatch-screen');
-  if (dm) dm.style.display = 'none';
-  document.getElementById('landing-section').style.display = 'block';
-  document.getElementById('app-section').style.display = 'none';
-  document.getElementById('expired-section').style.display = 'none';
-  document.getElementById('mainNav').style.display = 'block';
-  window.scrollTo(0, 0);
-}
-function showSection(s) { if (s === 'landing') handleLogout(); }
-
-// ──────────────────────────────────────────────────────
-// 9. MODAIS + UI
-// ──────────────────────────────────────────────────────
-function openAccessModal() {
-  document.getElementById('accessModal').classList.add('show');
-  document.body.classList.add('lock');
-}
-function closeModal(id) {
-  document.getElementById(id).classList.remove('show');
-  document.body.classList.remove('lock');
-}
-document.getElementById('accessModal').addEventListener('click', function(e) {
-  if (e.target === this) closeModal('accessModal');
-});
-document.getElementById('tokenInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') verifyToken();
-});
-
-// ── SCROLL NAV ──
-window.addEventListener('scroll', () => {
-  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
-
-// ── REVEAL ON SCROLL ──
+// REVEAL ON SCROLL 
 const rObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); rObs.unobserve(e.target); }});
-}, { threshold: .07, rootMargin: '0px 0px -30px 0px' });
+}, { threshold: .07 });
 document.querySelectorAll('.reveal').forEach(el => rObs.observe(el));
-
-// ── FAQ ACCORDION ──
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.parentElement;
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
-  });
-});
 </script>
 </body>
 </html>
